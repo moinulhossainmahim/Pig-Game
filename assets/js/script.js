@@ -7,7 +7,7 @@ GAME RULES:
  that, it's the next players turn
 - The first player is to reach 100 points on GLOBAl score wins the game
   */
-  
+
 (function() {
 	var scores, roundScore, activePlayer, gamePlaying
 	init()
@@ -33,7 +33,7 @@ GAME RULES:
 			scores[activePlayer] += roundScore
 			document.querySelector(`#score-${activePlayer}`).textContent = scores[activePlayer]
 
-			if(scores[activePlayer] >= 20) {
+			if(scores[activePlayer] >= 100) {
 				document.querySelector(`#name-${activePlayer}`).innerText = 'Winner!'
 				document.querySelector('.dice').style.display = 'none'
 				document.querySelector(`.player-${activePlayer}-panel`).classList.add('winner')
