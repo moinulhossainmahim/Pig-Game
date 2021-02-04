@@ -9,5 +9,18 @@ GAME RULES:
 - The first player is to reach 100 points on GLOBAl score wins the game
 
   */
+(function() {
+	var scores, roundScore, activePlayer
+	scores = [0,0]
+	roundScore = 0
+	activePlayer = 1
 
-  
+	document.querySelector('.dice').style.display = 'none'
+
+	document.querySelector('.btn-roll').addEventListener('click',() => {
+		var dice = Math.floor(Math.random() * 6) + 1
+		var diceDom = document.querySelector('.dice')
+		diceDom.style.display = 'block'
+		diceDom.src=`./assets/img/dice-${dice}.png`
+	})
+})()
